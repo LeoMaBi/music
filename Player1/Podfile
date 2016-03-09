@@ -1,0 +1,6 @@
+
+pod 'KGFloatingDrawer'
+pod 'AFSoundManager'
+pod 'KVNProgress'
+
+use_frameworks!

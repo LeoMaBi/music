@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="38I-TN-1Dg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="centerContorller" id="BYZ-38-t0r" customClass="PlayerViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="aUt-aS-mQQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prs" translatesAutoresizingMaskIntoConstraints="NO" id="G9g-k9-HMi">
+                                <rect key="frame" x="40" y="151" width="296" height="296"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cm2_play_disc-ip6" translatesAutoresizingMaskIntoConstraints="NO" id="Nb6-6l-fJV" customClass="PlayerImageView" customModule="Player" customModuleProvider="target">
+                                <rect key="frame" x="43" y="154" width="290" height="290"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqc-2Y-nKi" userLabel="mPreBtn">
+                                <rect key="frame" x="79" y="590" width="69" height="69"/>
+                                <state key="normal" image="cm2_play_btn_prev"/>
+                                <connections>
+                                    <action selector="onPreClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clv-pt-bPz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNN-gK-tPa">
+                                <rect key="frame" x="153" y="590" width="69" height="69"/>
+                                <state key="normal" image="cm2_fm_btn_play"/>
+                                <connections>
+                                    <action selector="onPlayClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Q2-Gz-XyR"/>
+                                </connections>
+                            </button>
+                            <view multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="334-Py-TqO" userLabel="MTitleView">
+                                <rect key="frame" x="-13" y="-6" width="400" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="171-FG-Snn" userLabel="MTitle Label">
+                                        <rect key="frame" x="90" y="30" width="220" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrU-2S-dc2" userLabel="MArtist">
+                                        <rect key="frame" x="90" y="49" width="220" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86274509803921573" green="0.78823529411764703" blue="0.78431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="feP-q9-fe3" userLabel="PlayedTime">
+                                <rect key="frame" x="10" y="561" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S88-8u-OG6" userLabel="mNextBtn">
+                                <rect key="frame" x="227" y="590" width="69" height="69"/>
+                                <state key="normal" image="cm2_fm_btn_next"/>
+                                <connections>
+                                    <action selector="onNextClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GcC-XB-5l5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BQ-Uw-HLM">
+                                <rect key="frame" x="0.0" y="590" width="74" height="69"/>
+                                <state key="normal" image="cm2_icn_loop"/>
+                                <connections>
+                                    <action selector="sortClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTP-CL-q3Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-BT-lLs" userLabel="AllTime">
+                                <rect key="frame" x="326" y="560" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-gd-9xZ" userLabel="Slider">
+                                <rect key="frame" x="50" y="561" width="270" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.83137254900000002" green="0.23529411759999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="hjG-BI-623"/>
+                                </connections>
+                            </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="26" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xeO-Uz-qWn" userLabel="MLrc Table">
+                                <rect key="frame" x="7" y="475" width="360" height="66"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lrcCell" id="4C7-1w-G9g" userLabel="lrcCell" customClass="SRLrcCell" customModule="Player" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="22" width="360" height="26"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4C7-1w-G9g" id="z65-c8-xuv">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="25.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teM-rC-tqB" userLabel="MTitle Lable">
+                                                    <rect key="frame" x="8" y="3" width="344" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mTitleLable" destination="teM-rC-tqB" id="xKf-5v-4s7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVH-6o-L1T">
+                                <rect key="frame" x="301" y="590" width="69" height="69"/>
+                                <state key="normal" image="cm2_topbar_icn_more"/>
+                                <connections>
+                                    <action selector="rightViewShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xij-Yz-iYH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <navigationItem key="navigationItem" id="YAL-ED-Za5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="AllTime" destination="aBr-BT-lLs" id="DFs-LG-VBx"/>
+                        <outlet property="MTitleView" destination="334-Py-TqO" id="Dgf-iY-XjN"/>
+                        <outlet property="PlayedTime" destination="feP-q9-fe3" id="QJa-Pz-lnD"/>
+                        <outlet property="mAlbumImageView" destination="Nb6-6l-fJV" id="1zZ-YW-Nf9"/>
+                        <outlet property="mArtist" destination="vrU-2S-dc2" id="I8J-HI-KSU"/>
+                        <outlet property="mLrcTable" destination="xeO-Uz-qWn" id="s1t-cm-OFN"/>
+                        <outlet property="mMainBGImageView" destination="aUt-aS-mQQ" id="3h8-Zc-NrM"/>
+                        <outlet property="mNextBtn" destination="S88-8u-OG6" id="huv-oc-4bX"/>
+                        <outlet property="mPlayBtn" destination="GNN-gK-tPa" id="2eo-nB-abh"/>
+                        <outlet property="mPreBtn" destination="aqc-2Y-nKi" id="Ucl-0o-5jh"/>
+                        <outlet property="mSlider" destination="Dlh-gd-9xZ" id="lbn-4M-OL5"/>
+                        <outlet property="mTitleLabel" destination="171-FG-Snn" id="hSY-uc-NbS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636.5" y="159.5"/>
+        </scene>
+        <!--Channel Table View Controller-->
+        <scene sceneID="O6H-f5-7kj">
+            <objects>
+                <tableViewController storyboardIdentifier="rightController" id="Qa5-h8-pFK" customClass="ChannelTableViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FfM-u3-Afw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="1" id="I9N-fI-S3t">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9N-fI-S3t" id="ftW-fS-Gwg">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qa5-h8-pFK" id="0Vo-Ub-YRS"/>
+                            <outlet property="delegate" destination="Qa5-h8-pFK" id="RXs-fK-5I2"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tg-cO-IgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5" y="159.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IXj-pA-Atr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="38I-TN-1Dg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dat-wh-5gu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zc2-3B-GpK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnt-wE-ynt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="160"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="640" height="640"/>
+        <image name="cm2_fm_btn_next" width="49" height="49"/>
+        <image name="cm2_fm_btn_play" width="68" height="68"/>
+        <image name="cm2_icn_loop" width="44" height="44"/>
+        <image name="cm2_play_btn_prev" width="49" height="49"/>
+        <image name="cm2_play_disc-ip6" width="298" height="298"/>
+        <image name="cm2_topbar_icn_more" width="28" height="28"/>
+        <image name="prs" width="106" height="106"/>
+    </resources>
+</document>
